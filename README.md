@@ -1,2 +1,3 @@
 # JavaScript-
-JavaScript form basic to advance 
+
+JavaScript from basic to advance
