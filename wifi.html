@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WIFI-System</title>
+  </head>
+  <body>
+    <pre><code id="output_el"></code></pre>
+    <button type="button" id="fetch_button">fetch</button>
+    <script>
+      const button = document.getElementById("fetch_button");
+      const output = document.getElementById("output_el");
+      button.addEventListener("click", () => {
+        fetch("./data.json")
+          .then((res) => {
+            return res.json();
+          })
+          .then((result) => {
+            output.innerText = result.students
+              .map((student) => student.name)
+              .join(", ");
+          });
+      });
+    </script>
+  </body>
+</html>

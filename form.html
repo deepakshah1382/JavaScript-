@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number is odd or even</title>
+</head>
+
+<body>
+    <form>
+        <label for="id_number"></label>
+        <input type="number" id="id_number">
+        <button type="submit">cheke</button>
+    </form>
+    <script>
+        let num = document.getElementById('id_number').value;
+        if (num % 2 === 0) {
+            alert("even number");
+        } else {
+            alert('odd')
+        }
+    </script>
+</body>
+
+</html>
